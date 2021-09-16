@@ -32,14 +32,18 @@ freq_chart <- ggplot(data=larc_age_19_20)+
   geom_bar(aes(x=age_group, y=count, fill = type),stat = "identity",
            position = "dodge")+
   scale_fill_discrete(type = color_pallete)+
-  theme_linedraw()
+  theme_linedraw()+
+  labs(x = "Age Group", y = "LARC type", 
+       title = "Barchart of LARC Methods Used in Scotland by Age Group")
 
 #proportional barchart of LARC frequencies by age
 prop_chart <- ggplot(data=larc_age_19_20)+
   geom_bar(aes(x=age_group, y=count, fill = type),stat = "identity",
            position = "fill")+
   scale_fill_discrete(type = color_pallete)+
-  theme_linedraw()
+  theme_linedraw()+
+  labs(x = "Age Group", y = "LARC type", 
+       title = "Proportional Barchart of LARC Methods Used in Scotland by Age Group")
 
 #view plots
 freq_chart
